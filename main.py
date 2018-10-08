@@ -15,14 +15,9 @@ def cmd(source_language_code, target_language_code, text):
     :param target_language_code:
     :param text:
     """
-    # click.echo(source_language_code)
-    # click.echo(target_language_code)
-    # click.echo(text)
     result = translate.translate_text(Text=text, 
             SourceLanguageCode=source_language_code, TargetLanguageCode=target_language_code)
     
-    # click.echo(result)
-
     translated = result['TranslatedText']
     click.echo(translated)
 
